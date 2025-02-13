@@ -1,0 +1,22 @@
+BEGIN:VCARD
+VERSION:3.0
+PRODID:-//Apple Inc.//macOS 15.0.1//EN
+N:;;;;
+FN:Belavie Voyager
+ORG:Belavie Voyager;
+item1.EMAIL;type=INTERNET;type=pref:susie@belavievoyager.com
+item1.X-ABLabel:Susie
+item2.EMAIL;type=INTERNET:john@belavievoyager.com
+item2.X-ABLabel:John
+item3.EMAIL;type=INTERNET:laurence@belavievoyager.com
+item3.X-ABLabel:Laurence
+item4.TEL;type=pref:+1 (305) 610-9455
+item4.X-ABLabel:Susie
+item5.TEL:+1 (561) 699-8998
+item5.X-ABLabel:John
+item6.TEL:+1 (786) 630-4891
+item6.X-ABLabel:Laurence
+item7.URL;type=pref:https://www.belavievoyager.com
+item7.X-ABLabel:_$!<HomePage>!$_
+X-ABShowAs:COMPANY
+END:VCARD
