@@ -11,7 +11,7 @@
 
   gtag('config', 'G-L9RVED7CXD');
 </script>
-    <title>Events - BV Events Event Info</title>
+    <title>BV Events Services</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,6 +24,138 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+ <style>
+    #bv-detailed-services {
+        font-family: 'Montserrat', sans-serif;
+        color: #84635D;
+        padding: 40px 20px;
+        background-color: transparent;
+    }
+
+    .service-category {
+        max-width: 1100px;
+        margin: 0 auto 80px auto;
+    }
+
+    /* MATCHING 'MEET THE TEAM' STYLE HEADER */
+    .service-header {
+        font-size: 32px;
+        font-weight: 700;
+        color: #84635D; 
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .service-subhead {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 40px;
+        text-align: center;
+        opacity: 0.8;
+    }
+
+    /* 2-COLUMN GRID */
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* CARD STYLE MATCHING HOMEPAGE */
+    .service-box {
+        background-color: rgba(255, 255, 255, 0.4); 
+        border: 1px solid rgba(132, 99, 93, 0.15); 
+        padding: 30px;
+        transition: all 0.3s ease;
+    }
+
+    .service-box:hover {
+        border-color: #c5a059; /* Gold accent */
+        background-color: #ffffff;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .service-box strong {
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .service-box p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 0;
+        font-weight: 400;
+    }
+    /* WHY CHOOSE US SECTION */
+    .why-choose {
+        background-color: rgba(132, 99, 93, 0.05);
+        padding: 80px 40px;
+        text-align: center;
+        margin: 100px auto 0 auto;
+        max-width: 1100px;
+    }
+
+    .why-choose h2 {
+        font-size: 28px;
+        font-weight: 700;
+        color: #84635D; 
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    .why-choose p {
+        font-size: 16px;
+        color: #84635D; 
+        max-width: 800px;
+        margin: 0 auto 40px auto;
+        line-height: 1.8;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 18px 45px;
+        border: 1px solid #84635D;
+        color: #84635D;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 700;
+        font-size: 13px;
+        transition: all 0.3s;
+    }
+
+    .cta-button:hover {
+        background-color: #84635D;
+        color: #ffffff;
+    }
+
+    @media (max-width: 768px) {
+        .service-grid { grid-template-columns: 1fr; }
+        .services-intro-wrap h1 { font-size: 26px; }
+    }
+
+    /* Mobile view: stack to 1 column */
+    @media (max-width: 768px) {
+        .service-grid {
+            grid-template-columns: 1fr;
+        }
+        .service-header {
+            font-size: 24px;
+            letter-spacing: 3px;
+        }
+    }
+</style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -94,182 +226,160 @@
         </div>
       </header>
       <!-- Breadcrumbs -->
-      <section class="breadcrumbs-custom-inset">
+      <section class="breadcrumbs-custom-inset">	
         <div class="breadcrumbs-custom context-dark bg-overlay-60">
           <div class="container">
-            <h2 style="color:#FFFFFF; "class="breadcrumbs-custom-title">Events</h2>
+            <h2 style="color:#FFFFFF; "class="breadcrumbs-custom-title">Services</h2>
             <ul class="breadcrumbs-custom-path">
               <li style="color:#FFFFFF;><a href="index.html">Home</a></li>
-              <li style="color:#FFFFFF;class="active">Events</li>
+              <li style="color:#FFFFFF;class="active">Services</li>
             </ul>
           </div>
-          <div class="box-position" style="background-image: url(images/breadcrumbs-bg.jpg);"></div>
+          <div class="box-position" style="background-image: url(images/breadcrumbs-bg1.jpg);"></div>
         </div>
       </section>
       <!-- Events -->
        <div class="container">
-       <h2 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> Crafting Unforgettable Events</h2>
-        <h3 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> From Streamlined Planning to Lasting Impact: The Complete Conference Package</h3>
+       <h2 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> ASSOCIATION MANAGEMENT</h2>
+        <h3 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> SIMPLIFYING OPERATIONS, AMPLIFYING RESULTS</h3>
        </div>
             <!-- Destinations-->
       <section  id="borabora" class="section section-sm section-first bg-default text-md-left">
         <div class="container">
           <div class="row row-50 justify-content-center align-items-xl-center">
-            <div  class="col-md-10 col-lg-5 col-xl-6"><img src="images/gallery-image-12-420x308-01c.jpg" alt="" width="420" height="308"/>
+            <div  class="col-md-10 col-lg-5 col-xl-6"><img src="images/gallery-image-12-420x308-01e.jpg" alt="" width="420" height="308"/>
             </div>
           
-                           <div  class="col-md-10 col-lg-5 col-xl-6"><img src="images/gallery-image-12-420x308-01d.jpg" alt="" width="420" height="308"/>
+                           <div  class="col-md-10 col-lg-5 col-xl-6"><img src="images/gallery-image-12-420x308-01f.jpg" alt="" width="420" height="308"/>
                   </div>
             </div>
           </div>
            <div class="container">
-       <h3 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> Pre-Conference Preparation</h3>
-						<p style="color:#84635D;" class="icon solid  fa-map"> Planning and Logistics: Define the conference objectives, themes, and agenda. Choose a venue – negotiate a favorable contract ensuring best pricing and perks, choose the AV company that best suits your needs and budget – whether in-house or outsourced, set dates, and determine the budget. Arrange for accommodations, catering, entertainment and technical requirements.</p>
+       <h3 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> At BV Events Group, we do more than plan meetings;</h3>
+						<p style="color:#84635D;">We become a true partner in the long-term success of your organization. By providing significant expertise and an unwavering commitment to your mission, we allow your leadership to focus on the "big picture" while we manage the daily complexities of operations.</p>
+<div id="bv-services-page">
 
-<br><p style="color:#84635D;" class="icon solid  fa-users">
-Speakers and Content: Coordinate speaker schedules and communications. Collect presentation materials in advance.</p>
+   <br>
+    <div id="bv-detailed-services">
 
-<br><p style="color:#84635D;" class="icon solid  fa-tag">
-Sponsorships: Assist in securing sponsorships and provide sponsor management</p>
-
-<br><p style="color:#84635D;" class="icon solid  fa-plane">
-Registration and Sales: Set up an online registration system and manage ticket sales. Set up promo codes, e.g. speakers, sponsors, Board of Directors, if needed. </p>
-
-<br><p style="color:#84635D;" class="icon solid fa-tag">
-Networking Opportunities: Plan networking sessions, receptions, exhibitor booths, and social events to encourage interaction among attendees, sponsors, and speakers.</p>
-<p style="color:#84635D;" class="icon solid  fa-map"> Apply for and manage Continuing Education Credit for attendees and speakers</p>
-<br><br><br>
-
-<h3 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> On-site Management</h3>
-						<p style="color:#84635D;" class="icon solid  fa-map"> Oversee the setup of the venue, registration desks, signage, decor, and technical equipment. Ensure everything runs smoothly and troubleshoot any issues that arise.</p>
-
-
-<br><p style="color:#84635D;" class="icon solid  fa-users">
-Backend Coordination:  Oversee check-ins, catering, audio visual, and rooms.</p>
-
-<br><p style="color:#84635D;" class="icon solid  fa-plane">
-Attendee Experience:  Provide support to attendees, answer questions, and address concerns. Collect feedback through surveys or comment cards. </p>
-
-<br><p style="color:#84635D;" class="icon solid fa-tag">
-Vendor and Sponsor Management:  Coordinate with sponsors and exhibitors, ensuring they have what they need and that their contributions align with the conference's goals.</p>
-
-<p style="color:#84635D;" class="icon solid  fa-map"> Proven Virtual Event Success: We've delivered numerous impactful virtual events. Let us show you how we can make yours a hit.</p>
-<br><br><br>
-<h3 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> Post-Conference</h3>
-						<p style="color:#84635D;" class="icon solid  fa-map"> Follow-Up : Send thank-you notes to speakers, sponsors, and attendees. Share presentations or resources from the conference. Gather and analyze feedback to improve future events.</p>
-
-<br><p style="color:#84635D;" class="icon solid  fa-users">
-Financial Review: Reconcile expenses, review budget adherence, and generate financial reports to assess the conference's success and areas for improvement.</p>
-
-<br><p style="color:#84635D;" class="icon solid  fa-plane">
-Documentation and Evaluation: Document key insights, successes, challenges, and lessons learned. Conduct a comprehensive evaluation to gauge attendee satisfaction and identify areas for enhancement.</p>
-<br><p style="color:#84635D;" class="icon solid fa-tag">
-Vendor and Sponsor Management:  Coordinate with sponsors and exhibitors, ensuring they have what they need and that their contributions align with the conference's goals.</p>
-<p style="color:#84635D;" class="icon solid  fa-map"> Distribute Certificates and follow-up for Continuing Education Credit for attendees and speakers</p>
-<br>
-       </div>
-      </section>
-      <h3 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;">Curated Family Retreats for High-Net-Worth Families</h3>
-            <section  id="borabora" class="section section-sm section-first bg-default text-md-left">
-        <div class="container">
-          <div class="row row-50 justify-content-center align-items-xl-center">
-            <div  class="col-md-10 col-lg-5 col-xl-6"><img src="images/gallery-image-12-420x308-01a.jpg" alt="" width="420" height="308"/>
+    <section class="service-category">
+        <h2 class="service-header">Board & Committee Support</h2>
+        <span class="service-subhead">Empowering Leadership through Governance</span>
+        <div class="service-grid">
+            <div class="service-box">
+                <strong>Meeting Management</strong>
+                <p>Scheduling, preparing board packets, and coordinating logistics for board retreats and annual meetings.</p>
             </div>
-          
-                           <div  class="col-md-10 col-lg-5 col-xl-6"><img src="images/gallery-image-12-420x308-01b.jpg" alt="" width="420" height="308"/>
-                  </div>
+            <div class="service-box">
+                <strong>Records & Minutes</strong>
+                <p>Taking and preparing official minutes and maintaining historical archives.</p>
             </div>
-          </div>
-           <div class="container">
-       
-		<h4 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"> Where Legacy Meets Adventure: Create Lasting Memories and Strengthen Family Bonds.</h4>
-			<br><p style="color:#84635D;" class="icon solid  fa-users">
-We offer full retreat planning with unparalleled service, insider knowledge and exclusive perks for families that see the value in spending quality time together. Growing and learning as a family is essential to the success of a family-run business. We offer in-house Travel Advisor services to, from and within the chosen destination. Don’t forget the kids! We create children’s activities to keep the little ones interested and excited to meet other little ones. Enjoy bespoke experiences for the whole family along with tailored experiences for individuals who wish to incorporate me-time in addition to family-time. We provide business meeting coordination and educational programs to balance business and play.</p>
-					<br><a style="color:#84635D;"  href="https://bveventsgroup.COM/belavievoyagerflyer.pdf" target="_blank">Download our HNW PDF Flyer</a><br>
-					</div>
-					
-				</div>
-       </div>
-       </div>
-      </section>
+            <div class="service-box">
+                <strong>Strategic Development</strong>
+                <p>Facilitating strategic planning sessions and assisting in the implementation of organizational goals.</p>
+            </div>
+            <div class="service-box">
+                <strong>Onboarding</strong>
+                <p>Providing training and resources for new volunteer leaders to ensure a smooth transition.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-category">
+        <h2 class="service-header">Member Services & Communications</h2>
+        <span class="service-subhead">Building Community and Increasing Value</span>
+        <div class="service-grid">
+            <div class="service-box">
+                <strong>Membership Database</strong>
+                <p>Maintaining accurate and secure member records and managing renewals.</p>
+            </div>
+            <div class="service-box">
+                <strong>Inquiry Response</strong>
+                <p>Providing a dedicated point of contact to answer calls and respond to member requests promptly.</p>
+            </div>
+            <div class="service-box">
+                <strong>Communications</strong>
+                <p>Developing and distributing member alerts, newsletters, and email blasts.</p>
+            </div>
+            <div class="service-box">
+                <strong>Recruitment & Retention</strong>
+                <p>Implementing strategies to engage new demographics and increase membership value.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-category">
+        <h2 class="service-header">Continuing Education Administration</h2>
+        <span class="service-subhead">Advancing Professional Excellence</span>
+        <div class="service-grid">
+            <div class="service-box">
+                <strong>Program Management</strong>
+                <p>Coordinating the development and delivery of educational content and workshops.</p>
+            </div>
+            <div class="service-box">
+                <strong>Credit Tracking</strong>
+                <p>Managing the application, tracking, and distribution of Continuing Education (CE) certificates.</p>
+            </div>
+            <div class="service-box">
+                <strong>Certification Oversight</strong>
+                <p>Administering examination processes, registration, and post-exam reporting.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-category">
+        <h2 class="service-header">Sponsorship & Financial Support</h2>
+        <span class="service-subhead">Ensuring Fiduciary Integrity & Growth</span>
+        <div class="service-grid">
+            <div class="service-box">
+                <strong>Sponsorship Strategy</strong>
+                <p>Creating value-driven tiers and managing partner relationships to drive revenue.</p>
+            </div>
+            <div class="service-item service-box">
+                <strong>Financial Reporting</strong>
+                <p>Providing timely administrative data and assisting Treasurers with budget tracking.</p>
+            </div>
+            <div class="service-box">
+                <strong>Dues Billing</strong>
+                <p>Managing the membership billing process and accounts receivable.</p>
+            </div>
+            <div class="service-box">
+                <strong>Exhibitor Sales</strong>
+                <p>Managing logistics and sales for trade shows and exhibition halls.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-category">
+        <h2 class="service-header">Website & Social Media Management</h2>
+        <span class="service-subhead">Strengthening Your Digital Brand</span>
+        <div class="service-grid">
+            <div class="service-box">
+                <strong>Dynamic Web Management</strong>
+                <p>Maintaining a user-friendly, current website that serves as a resource hub.</p>
+            </div>
+            <div class="service-box">
+                <strong>Social Media Campaigns</strong>
+                <p>Utilizing platforms like LinkedIn and Instagram to reach new audiences.</p>
+            </div>
+            <div class="service-box">
+                <strong>Content Creation</strong>
+                <p>Developing digital assets that align with your brand’s voice and mission.</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+    <section class="why-choose">
+        <h2>Why Choose BV Events Group?</h2>
+        <p>Unlike traditional staffing models, our association management approach offers unparalleled flexibility and cost-effectiveness. You gain access to a full team of specialists—from communications experts to event strategists—without the overhead of full-time employees.</p>
+        <a href="contact-us.html" class="cta-button">Contact Us Today for a Comprehensive Proposal</a>
+    </section>
+
+</div>
      
 
-    <!--	Instagrram wondertour-->
-      <section id="clients" class="section section-sm section-top-0 section-fluid section-relative bg-gray-4">
-        <div class="container-fluid">
-         <center> <h6 class="text-spacing-25 font-weight-normal title-opacity-8" style="color:#84635D;"class="gallery-title">Clients & Events Gallery</h6></center>
-          <!-- Owl Carousel-->
-          <div class="owl-carousel owl-classic owl-dots-secondary" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-xl-items="5" data-xxl-items="6" data-stage-padding="15" data-xxl-stage-padding="0" data-margin="30" data-autoplay="true" data-nav="true" data-dots="true">
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-8-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-             
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-2-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-              
-            </article>
-            
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-4-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-              
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-5-270x195.jpeg" alt="" width="270" height="195"/>
-              
-              
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-6-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-             
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-7-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-              </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-9-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-              </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-10-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-              </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-11-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-            </article>
-           
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-12-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-              </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-13-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-            </article>
-                <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-14-270x195.jpeg" alt="" width="270" height="195"/>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
 
 
 
