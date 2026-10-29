@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RM61HD7MZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-L9RVED7CXD');
+    </script>
+    <title>Event Photos - BV Events</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <!-- Keeps this page out of search engines. Delete this line if you want Google to find it. -->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
+
+      /* ---- Photo gallery ---- */
+      .pg-wrap { padding: 40px 0 60px; }
+      .pg-title { color: #84635D; margin-bottom: 6px; }
+      .pg-count { color: #84635D; opacity: .8; margin-bottom: 24px; }
+      .pg-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        gap: 8px;
+      }
+      .pg-tile {
+        display: block;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background: #e9e4e2;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+      }
+      .pg-tile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform .25s ease, opacity .25s ease;
+      }
+      .pg-tile:hover img, .pg-tile:focus-visible img { transform: scale(1.05); }
+      .pg-tile:focus-visible { outline: 3px solid #84635D; outline-offset: 2px; }
+      .pg-message { color: #84635D; padding: 30px 0; }
+
+      /* ---- Lightbox ---- */
+      .pg-lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 100000;
+        background: rgba(0, 0, 0, .96);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        touch-action: pan-y;
+      }
+      .pg-lightbox.open { display: flex; }
+      .pg-lightbox img {
+        max-width: 94vw;
+        max-height: 82vh;
+        object-fit: contain;
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+      .pg-btn {
+        position: absolute;
+        background: rgba(255, 255, 255, .12);
+        color: #fff;
+        border: 0;
+        border-radius: 50%;
+        width: 46px;
+        height: 46px;
+        font-size: 26px;
+        line-height: 46px;
+        text-align: center;
+        cursor: pointer;
+        padding: 0;
+      }
+      .pg-btn:hover, .pg-btn:focus-visible { background: rgba(255, 255, 255, .3); outline: none; }
+      .pg-close { top: 14px; right: 14px; }
+      .pg-prev  { left: 12px; top: 50%; transform: translateY(-50%); }
+      .pg-next  { right: 12px; top: 50%; transform: translateY(-50%); }
+      .pg-bar {
+        position: absolute;
+        left: 0; right: 0; bottom: 0;
+        padding: 12px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        font-size: 14px;
+        font-family: Montserrat, sans-serif;
+      }
+      .pg-bar a { color: #fff; text-decoration: underline; }
+      @media (max-width: 575px) {
+        .pg-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 4px; }
+        .pg-prev, .pg-next { width: 40px; height: 40px; line-height: 40px; font-size: 22px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page">
+     <!-- Page Header-->
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="106px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div class="rd-navbar-aside-outer">
+              <div class="rd-navbar-aside">
+                <!-- RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!-- RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand">
+                   <!--Brand--><a class="brand" href="index.html"><img src="images/belavienosquarelogosmall.png" alt="" /></a>
+                  </div>
+                </div>
+                <div class="rd-navbar-aside-right rd-navbar-collapse">
+                  <ul class="rd-navbar-corporate-contacts">
+                    <li>
+                      <div class="unit unit-spacing-xs">
+                        <div class="unit-left"><span style="color:#84635D;" class="icon fa fa-phone"></span></div>
+                        <div class="unit-body"><a style="color:#84635D;" class="link-phone" href="tel:+17864014343">+1 786-401-4343</a></div>
+                      </div>
+                    </li>
+                  </ul><a style="color:#84635D;" class="button button-md button-default-outline-2 button-ujarak" href="/contact-us.html">Get in touch</a>
+                </div>
+              </div>
+            </div>
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <div class="rd-navbar-nav-wrap">
+                  <ul class="list-inline list-inline-md rd-navbar-corporate-list-social">
+                     <li><a style="color:#84635D;" class="icon fa fa-linkedin" href="https://www.linkedin.com/company/bveventsllc/" target="_blank"></a></li>
+                    <li><a style="color:#84635D;" class="icon fa fa-envelope" href="mailto:info@BVEventsGroup.com"> </a></li>
+                  </ul>
+                  <!-- RD Navbar Nav-->
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Breadcrumbs -->
+      <section class="breadcrumbs-custom-inset">
+        <div class="breadcrumbs-custom context-dark bg-overlay-60">
+          <div class="container">
+            <h2 style="color:#FFFFFF;" class="breadcrumbs-custom-title">Event Photos</h2>
+            <ul class="breadcrumbs-custom-path">
+              <li style="color:#FFFFFF;"><a href="index.html">Home</a></li>
+              <li style="color:#FFFFFF;" class="active">Event Photos</li>
+            </ul>
+          </div>
+          <div class="box-position" style="background-image: url(images/breadcrumbs-bg.jpg);"></div>
+        </div>
+      </section>
+
+      <!-- Photo gallery -->
+      <section class="section pg-wrap">
+        <div class="container">
+          <h3 id="pg-title" class="pg-title font-weight-normal">Event Photos</h3>
+          <p id="pg-count" class="pg-count"></p>
+          <div id="pg-grid" class="pg-grid"></div>
+          <p id="pg-message" class="pg-message" style="display:none;"></p>
+        </div>
+      </section>
+
+      <!-- Lightbox -->
+      <div id="pg-lightbox" class="pg-lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+        <button type="button" class="pg-btn pg-close" id="pg-close" aria-label="Close">&times;</button>
+        <button type="button" class="pg-btn pg-prev" id="pg-prev" aria-label="Previous photo">&#8249;</button>
+        <img id="pg-big" alt="">
+        <button type="button" class="pg-btn pg-next" id="pg-next" aria-label="Next photo">&#8250;</button>
+        <div class="pg-bar">
+          <span id="pg-counter"></span>
+          <a id="pg-download" href="#" download>Download this photo</a>
+        </div>
+      </div>
+
+           <!-- Page Footer-->
+      <footer class="section footer-corporate context-dark">
+        <div class="footer-corporate-inset">
+          <div class="container">
+            <div class="row row-40 justify-content-lg-between">
+              <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+                <div class="oh-desktop">
+                  <div class="wow slideInRight" data-wow-delay="0s">
+                    <h6 style="color:#84635D;" class="text-spacing-100 text-uppercase">Contact us</h6>
+                    <ul class="footer-contacts d-inline-block d-sm-block">
+                      <li>
+                        <div class="unit">
+                          <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                          <div style="color:#84635D;" class="unit-body"><a style="color:#84635D;" class="link-phone" href="tel:+17864014343">+1 786-401-4343</a></div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="unit">
+                          <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
+                          <div class="unit-body"><a style="color:#84635D;" class="link-aemail" href="mailto:info@BVEventsGroup.com">info@BVEventsGroup.com</a></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
+                <div class="oh-desktop">
+                  <div class="wow slideInDown" data-wow-delay="0s">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-11 col-md-7 col-lg-5 col-xl-4">
+                <div class="oh-desktop">
+                  <div class="wow slideInLeft" data-wow-delay="0s">
+                    <h6 style="color:#84635D;" class="text-spacing-100 text-uppercase">Quick links</h6>
+                    <ul class="row-6 list-0 list-marked list-marked-md list-marked-secondary list-custom-2">
+                      <li style="color:#84635D;"><a href="index.html#about">About us</a></li>
+                      <li style="color:#84635D;"><a href="events.html">Events</a></li>
+                      <li style="color:#84635D;"><a href="services.html">Services</a></li>
+                      <li style="color:#84635D;"><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                    <div class="group-md group-middle justify-content-sm-start"><a class="button button-lg button-primary button-ujarak" href="contact-us.html">Get in touch</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-corporate-bottom-panel">
+          <div class="container">
+            <div class="row justfy-content-xl-space-berween row-10 align-items-md-center2">
+              <div class="col-sm-6 col-md-4 text-sm-right text-md-center">
+                <div>
+                  <ul class="list-inline list-inline-sm footer-social-list-2">
+                    <li><a style="color:#84635D;" class="icon fa fa-envelope" href="mailto:info@BVEventsGroup.com"> </a></li>
+                    <li><a style="color:#84635D;" class="icon fa fa-linkedin" href="https://www.linkedin.com/company/bveventsllc/" target="_blank"></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 order-sm-first">
+                <!-- Rights-->
+                <p class="rights"><span>&copy;&nbsp;</span><span style="color:#84635D;" class="copyright-year"></span><span>&nbsp;</span><span style="color:#84635D;">BVEvents All Rights Reserved.</span> </p>
+              </div>
+              <div class="col-sm-6 col-md-4 text-md-right">
+                <p style="color:#84635D;" class="rights"><a href="privacy.html">Privacy Policy</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+    /*
+      Photo gallery, one folder per event.
+      Open the page as  event-photos.html?event=event-name  and it reads
+      photos/event-name/photos.json (written by the make_gallery script),
+      showing thumbnails from photos/event-name/thumbs/ and full-size
+      versions from photos/event-name/full/ in the viewer.
+    */
+    (function () {
+      var found = location.search.match(/[?&]event=([^&#]*)/);
+      var eventName = found ? decodeURIComponent(found[1]).toLowerCase() : '';
+      var validEvent = /^[a-z0-9]+(-[a-z0-9]+)*$/.test(eventName);
+      var BASE = 'photos/' + eventName + '/';
+      var FULL = BASE + 'full/';
+      var THUMBS = BASE + 'thumbs/';
+      var MANIFEST = BASE + 'photos.json';
+
+      var grid = document.getElementById('pg-grid');
+      var titleEl = document.getElementById('pg-title');
+      var countEl = document.getElementById('pg-count');
+      var msgEl = document.getElementById('pg-message');
+      var box = document.getElementById('pg-lightbox');
+      var big = document.getElementById('pg-big');
+      var counter = document.getElementById('pg-counter');
+      var download = document.getElementById('pg-download');
+      var photos = [];
+      var current = -1;
+      var lastFocus = null;
+
+      function showMessage(text) {
+        msgEl.textContent = text;
+        msgEl.style.display = 'block';
+      }
+
+      function url(folder, name) {
+        return folder + encodeURIComponent(name);
+      }
+
+      function build() {
+        var frag = document.createDocumentFragment();
+        photos.forEach(function (name, i) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'pg-tile';
+          b.setAttribute('aria-label', 'Open photo ' + (i + 1) + ' of ' + photos.length);
+          var img = document.createElement('img');
+          img.src = url(THUMBS, name);
+          img.alt = '';
+          img.loading = 'lazy';
+          img.decoding = 'async';
+          b.appendChild(img);
+          b.addEventListener('click', function () { open(i, b); });
+          frag.appendChild(b);
+        });
+        grid.appendChild(frag);
+      }
+
+      function show(i) {
+        current = (i + photos.length) % photos.length;
+        var name = photos[current];
+        big.src = url(FULL, name);
+        big.alt = 'Event photo ' + (current + 1) + ' of ' + photos.length;
+        counter.textContent = (current + 1) + ' / ' + photos.length;
+        download.href = url(FULL, name);
+        download.setAttribute('download', name);
+        // Preload the neighbours so next/previous feels instant.
+        [current + 1, current - 1].forEach(function (n) {
+          var p = new Image();
+          p.src = url(FULL, photos[(n + photos.length) % photos.length]);
+        });
+      }
+
+      function open(i, opener) {
+        lastFocus = opener || document.activeElement;
+        show(i);
+        box.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        document.getElementById('pg-close').focus();
+      }
+
+      function close() {
+        box.classList.remove('open');
+        document.body.style.overflow = '';
+        big.removeAttribute('src');
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      }
+
+      document.getElementById('pg-close').addEventListener('click', close);
+      document.getElementById('pg-prev').addEventListener('click', function () { show(current - 1); });
+      document.getElementById('pg-next').addEventListener('click', function () { show(current + 1); });
+      box.addEventListener('click', function (e) {
+        if (e.target === box) close();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (!box.classList.contains('open')) return;
+        if (e.key === 'Escape') close();
+        else if (e.key === 'ArrowLeft') show(current - 1);
+        else if (e.key === 'ArrowRight') show(current + 1);
+      });
+
+      // Swipe left/right on phones.
+      var startX = null;
+      box.addEventListener('touchstart', function (e) {
+        startX = e.changedTouches[0].clientX;
+      }, { passive: true });
+      box.addEventListener('touchend', function (e) {
+        if (startX === null) return;
+        var dx = e.changedTouches[0].clientX - startX;
+        startX = null;
+        if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+      }, { passive: true });
+
+      if (!validEvent) {
+        showMessage('Please use the link for a specific event to see its photos.');
+        return;
+      }
+
+      fetch(MANIFEST, { cache: 'no-cache' })
+        .then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function (data) {
+          photos = data.photos || [];
+          if (data.title) {
+            titleEl.textContent = data.title;
+            document.title = data.title + ' - BV Events';
+          }
+          if (!photos.length) {
+            showMessage('No photos have been added yet.');
+            return;
+          }
+          countEl.textContent = photos.length + ' photos. Click any photo to enlarge it.';
+          build();
+        })
+        .catch(function () {
+          showMessage('Photos for this event could not be found. Please check the link, or try again in a few minutes.');
+        });
+    })();
+    </script>
+  </body>
+</html>

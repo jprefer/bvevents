@@ -3,7 +3,7 @@
 
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RM61HD7MZ"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9RVED7CXD"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -212,7 +212,7 @@
         <button type="button" class="pg-btn pg-next" id="pg-next" aria-label="Next photo">&#8250;</button>
         <div class="pg-bar">
           <span id="pg-counter"></span>
-          <a id="pg-download" href="#" download>Download this photo</a>
+          <a id="pg-download" href="#">Download this photo</a>
         </div>
       </div>
 
@@ -322,6 +322,74 @@
       var photos = [];
       var current = -1;
       var lastFocus = null;
+      var readyBlob = null;
+      var readyName = null;
+      var downloadLabel = download.textContent;
+
+      function isTouch() {
+        return !!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+      }
+
+      function setLabel(text) {
+        download.textContent = text;
+        if (text !== downloadLabel) {
+          setTimeout(function () { download.textContent = downloadLabel; }, 4000);
+        }
+      }
+
+      // Save the current photo. A plain link with a "download" attribute is ignored by
+      // many phone browsers (they just show the picture), so this hands the browser
+      // the file itself, and on phones opens the share sheet where "Save Image" lives.
+      function saveCurrent(e) {
+        if (e) e.preventDefault();
+        var name = photos[current];
+        var href = url(FULL, name);
+
+        function viaLink(blob) {
+          var obj = URL.createObjectURL(blob);
+          var a = document.createElement('a');
+          a.href = obj;
+          a.download = name;
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+          setTimeout(function () { URL.revokeObjectURL(obj); }, 15000);
+        }
+
+        function fallback() {
+          window.open(href, '_blank');
+          setLabel('Press and hold the photo to save it');
+        }
+
+        function deliver(blob) {
+          var file = null;
+          try { file = new File([blob], name, { type: blob.type || 'image/jpeg' }); } catch (err) {}
+          if (isTouch() && file && navigator.canShare && navigator.canShare({ files: [file] })) {
+            return navigator.share({ files: [file] }).catch(function (err) {
+              if (err && err.name === 'AbortError') return;   // person closed the share sheet
+              viaLink(blob);
+            });
+          }
+          viaLink(blob);
+        }
+
+        // Photo already fetched (phones): share straight away, inside the tap.
+        if (readyBlob && readyName === name) {
+          deliver(readyBlob);
+          return;
+        }
+        if (!window.fetch) { fallback(); return; }
+        setLabel('Preparing...');
+        fetch(href).then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.blob();
+        }).then(function (blob) {
+          download.textContent = downloadLabel;
+          return deliver(blob);
+        }).catch(fallback);
+      }
+
+      download.addEventListener('click', saveCurrent);
 
       function showMessage(text) {
         msgEl.textContent = text;
@@ -357,8 +425,21 @@
         big.src = url(FULL, name);
         big.alt = 'Event photo ' + (current + 1) + ' of ' + photos.length;
         counter.textContent = (current + 1) + ' / ' + photos.length;
-        download.href = url(FULL, name);
-        download.setAttribute('download', name);
+        // Note: the Download link keeps href="#" on purpose. The site's page-transition
+        // script navigates to any link that has no "#", which is what used to open the
+        // photo instead of saving it. saveCurrent() below does the saving.
+        // On phones and tablets, have the photo ready so the Download button can
+        // open the share sheet (Save Image) the instant it is tapped.
+        readyBlob = null;
+        readyName = null;
+        if (isTouch() && window.fetch) {
+          var wanted = name;
+          fetch(url(FULL, name)).then(function (r) {
+            return r.ok ? r.blob() : null;
+          }).then(function (b) {
+            if (b && photos[current] === wanted) { readyBlob = b; readyName = wanted; }
+          }).catch(function () {});
+        }
         // Preload the neighbours so next/previous feels instant.
         [current + 1, current - 1].forEach(function (n) {
           var p = new Image();
